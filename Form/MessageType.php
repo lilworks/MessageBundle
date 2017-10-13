@@ -31,6 +31,11 @@ class MessageType extends AbstractType
             $builder->add('email',EmailType::class,array(
                 'required'=>true
             ));
+        }else{
+            $builder->add('email',EmailType::class,array(
+                'required'=>true,
+                'data'=>$user->getEmail()
+            ));
         }
         $builder->add('send', SubmitType::class, array(
             'attr' => array('class' => 'send'),

@@ -8,11 +8,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
-    public function indexAction()
-    {
 
-        return $this->render('LilworksMessageBundle:Default:index.html.twig');
-    }
     public function formAction(Request $request)
     {
         $message = new Message();
@@ -21,9 +17,6 @@ class DefaultController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            if($this->getUser()){
-                $message->setEmail($this->getUser()->getEmail());
-            }
             $em->persist($message);
             $em->flush();
 

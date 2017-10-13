@@ -1,1 +1,11 @@
-{{ dump(message) }}
+<h1>{{ 'message.sent.titre'|trans }}</h1>
+<p>{{ 'message.sent.text'|trans }}</p>
+
+<div>
+    <h4>{{ message.messageSubject }}</h4>
+    {{ message.message }}
+</div>
+{% if message.getCopy == 1 %}
+    <p>{{ 'message.sent.copysent%email%'|trans({'%email%':message.email}) }}</p>
+{% endif  %}
+

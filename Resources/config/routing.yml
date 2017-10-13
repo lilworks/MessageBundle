@@ -1,5 +1,5 @@
 lil_works_message_form:
-    path:     /form
+    path:     /
     defaults: { _controller: LilworksMessageBundle:Default:form }
 lil_works_message_sent:
     path:     /{id}/sent
