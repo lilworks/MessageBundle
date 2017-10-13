@@ -1,3 +1,6 @@
-lilworks_message_homepage:
-    path:     /
-    defaults: { _controller: LilworksMessageBundle:Default:index }
+lil_works_message_form:
+    path:     /form
+    defaults: { _controller: LilworksMessageBundle:Default:form }
+lil_works_message_sent:
+    path:     /{id}/sent
+    defaults: { _controller: LilworksMessageBundle:Default:sent }
